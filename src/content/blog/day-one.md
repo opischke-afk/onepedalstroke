@@ -1,10 +1,10 @@
 ---
 title: "Day one"
-description: "A 58-year-old in Saarland decides to ride across Europe. Four years to find out if that was wise."
+description: "A 58-year-old German decides to ride across Europe. Four years to find out if that was wise."
 pubDate: "2026-05-10"
 ---
 
-A 58-year-old in Saarland decides to ride across Europe.
+A 58-year-old German decides to ride across Europe.
 
 Four years to find out if that was wise.
 
