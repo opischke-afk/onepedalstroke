@@ -7,23 +7,32 @@ const isAbout = pathname.startsWith('/about');
 ---
 
 <header class="site-header">
-	<a class="site-mark" href="/">
-		<svg viewBox="0 0 100 100" width="20" height="20" aria-hidden="true">
-			<circle
-				cx="50"
-				cy="50"
-				r="38"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2.8"
-				stroke-dasharray="218 26"
-				stroke-dashoffset="-12"
-				stroke-linecap="round"
-				transform="rotate(-130 50 50)"
-			></circle>
-		</svg>
-		<span class="site-mark__name">{SITE_TITLE}</span>
-	</a>
+	<div class="site-mark">
+		<a class="site-mark__home" href="/">
+			<svg viewBox="0 0 100 100" width="20" height="20" aria-hidden="true">
+				<circle
+					cx="50"
+					cy="50"
+					r="38"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2.8"
+					stroke-dasharray="218 26"
+					stroke-dashoffset="-12"
+					stroke-linecap="round"
+					transform="rotate(-130 50 50)"
+				></circle>
+			</svg>
+			<span class="site-mark__name">{SITE_TITLE}</span>
+		</a>
+		<span class="site-mark__sep" aria-hidden="true">·</span>
+		<a
+			class="site-mark__social"
+			href="https://www.instagram.com/onepedalstroke/"
+			target="_blank"
+			rel="noopener noreferrer">@onepedalstroke</a
+		>
+	</div>
 	<nav class="site-nav">
 		<a href="/" class:list={[{ 'is-active': isIndex }]}>Index</a>
 		<a href="/about" class:list={[{ 'is-active': isAbout }]}>About</a>
