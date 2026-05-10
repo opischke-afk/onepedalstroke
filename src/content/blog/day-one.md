@@ -17,3 +17,8 @@ This site exists to keep me honest. Public commitment, public record, public rec
 If you ride, if you're curious, if you want to see whether a returning amateur can build to TCR in four years from a flat corner of Germany, follow along.
 
 One pedal stroke. Then another.
+
+<figure class="article-figure">
+  <img src="/images/day-one-bike.jpg" alt="Rose Reveal AL 105 Di2, leaning on a bench in Saarlouis" />
+</figure>
+<p class="article-caption">Day one. Saarlouis.</p>
