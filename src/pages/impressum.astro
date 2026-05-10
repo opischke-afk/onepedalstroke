@@ -1,0 +1,58 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`Impressum — ${SITE_TITLE}`}
+			description="Legal notice and information in accordance with §5 TMG."
+		/>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="legal">
+				<h1 class="legal__title">Impressum / Legal Notice</h1>
+
+				<p>Information in accordance with §5 TMG (German Telemediengesetz).</p>
+
+				<h2>Responsible for content</h2>
+				<p>
+					Oliver Pischke<br />
+					Saarlouis<br />
+					Germany
+				</p>
+				<p>Email: hello@onepedalstroke.cc</p>
+
+				<h2>Responsibility for content under §55 Abs. 2 RStV</h2>
+				<p>Oliver Pischke, at the address above.</p>
+
+				<h2>Disclaimer</h2>
+				<p>
+					This is a private, non-commercial website. The content reflects personal experiences and
+					opinions and is not professional advice.
+				</p>
+
+				<h3>Links to external sites</h3>
+				<p>
+					This site contains links to external websites operated by third parties. I have no
+					influence over the content of these external sites and accept no responsibility for them.
+					The operators of the linked sites are solely responsible for their content.
+				</p>
+
+				<h3>Copyright</h3>
+				<p>
+					All content on this site, including text and photographs, is © Oliver Pischke unless
+					otherwise noted. Reproduction, distribution, or commercial use requires written
+					permission.
+				</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -1,141 +1,372 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+/* ============================================================
+   onepedalstroke — Sumi
+   Soto-zen restraint. Whitespace is the dominant element.
+   ============================================================ */
+
+/* Self-hosted fonts — Latin subset only, WOFF2.
+   Sourced via google-webfonts-helper, served from /fonts/.
+   No third-party requests, no GDPR exposure. */
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/cormorant-garamond-300.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/cormorant-garamond-300-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/cormorant-garamond-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/cormorant-garamond-400-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/cormorant-garamond-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/cormorant-garamond-500-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/cormorant-garamond-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/cormorant-garamond-600-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/manrope-300.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/manrope-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/manrope-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/manrope-600.woff2") format("woff2");
+}
 
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
-}
-body {
-	font-family: var(--font-atkinson);
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
-}
-main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
-}
-h1 {
-	font-size: 3.052em;
-}
-h2 {
-	font-size: 2.441em;
-}
-h3 {
-	font-size: 1.953em;
-}
-h4 {
-	font-size: 1.563em;
-}
-h5 {
-	font-size: 1.25em;
-}
-strong,
-b {
-	font-weight: 700;
-}
-a {
-	color: var(--accent);
-}
-a:hover {
-	color: var(--accent);
-}
-p {
-	margin-bottom: 1em;
-}
-.prose p {
-	margin-bottom: 2em;
-}
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-input {
-	font-size: 16px;
-}
-table {
-	width: 100%;
-}
-img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 8px;
-}
-code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
-}
-pre {
-	padding: 1.5em;
-	border-radius: 8px;
-}
-pre > code {
-	all: unset;
-}
-blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0;
-	font-size: 1.333em;
-}
-hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
-}
-@media (max-width: 720px) {
-	body {
-		font-size: 18px;
-	}
-	main {
-		padding: 1em;
-	}
+  /* Palette */
+  --paper: #FAF8F4;
+  --sumi:  #0E0D0B;
+  --ash:   #9B9892;
+  --stone: #DCD6CB;
+
+  /* Type */
+  --serif: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, serif;
+  --sans:  Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
 }
 
-.sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
-	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
-	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
-	white-space: nowrap;
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--paper);
+  color: var(--sumi);
+  font-family: var(--serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img, svg { display: block; }
+a { color: inherit; }
+
+/* ---------- Site chrome ------------------------------------- */
+
+.site-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 44px 80px 0;
+}
+.site-mark { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--sumi); }
+.site-mark__name {
+  font-family: var(--serif); font-style: italic; font-weight: 400;
+  font-size: 17px; letter-spacing: 0.01em;
+}
+.site-nav { display: flex; gap: 24px; }
+.site-nav a {
+  font-family: var(--sans); font-size: 10px; font-weight: 400;
+  letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--ash); text-decoration: none;
+}
+.site-nav a.is-active { color: var(--sumi); }
+
+.site-footer {
+  margin: 160px 0 0; padding: 40px 80px 56px;
+  display: flex; justify-content: center; align-items: center; gap: 18px;
+}
+.site-footer__text {
+  font-family: var(--sans); font-size: 9px; font-weight: 400;
+  letter-spacing: 0.4em; text-transform: uppercase; color: var(--ash);
+}
+
+/* ---------- Utilities --------------------------------------- */
+
+.eyebrow {
+  font-family: var(--sans); font-size: 10px; font-weight: 400;
+  letter-spacing: 0.4em; text-transform: uppercase;
+  color: var(--ash); margin: 0;
+}
+.eyebrow--center { text-align: center; }
+.rule { width: 24px; height: 1px; background: var(--ash); border: 0; margin: 0 auto; }
+
+/* ---------- Home -------------------------------------------- */
+
+.home-hero { padding: 180px 0 0; display: flex; justify-content: center; }
+.home-hero__inner { max-width: 520px; text-align: center; }
+.home-hero__mark { display: flex; justify-content: center; margin-bottom: 48px; }
+.home-hero__date { margin: 0 0 36px; }
+.home-hero__title {
+  font-family: var(--serif); font-weight: 300; font-style: italic;
+  font-size: 56px; line-height: 1.18; letter-spacing: -0.005em;
+  margin: 0; color: var(--sumi);
+}
+
+.home-entry { padding: 180px 0 0; display: flex; justify-content: center; }
+.home-entry__inner { max-width: 480px; }
+.home-entry__label { margin: 0 0 22px; }
+.home-entry__link { text-decoration: none; color: var(--sumi); }
+.home-entry__title {
+  font-family: var(--serif); font-weight: 400;
+  font-size: 32px; line-height: 1.22; letter-spacing: -0.005em;
+  margin: 0 0 18px; max-width: 20ch;
+}
+.home-entry__excerpt {
+  font-family: var(--serif); font-style: italic;
+  font-size: 18px; line-height: 1.55; color: var(--ash);
+  margin: 0; max-width: 36ch;
+}
+.home-entry__all {
+  margin-top: 80px; padding-top: 22px;
+  border-top: 1px solid var(--stone); text-align: center;
+}
+.home-entry__all a {
+  font-family: var(--sans); font-size: 10px; font-weight: 400;
+  letter-spacing: 0.4em; text-transform: uppercase;
+  color: var(--ash); text-decoration: none;
+}
+
+/* ---------- Article ----------------------------------------- */
+
+.article { padding: 140px 0 0; margin: 0 auto; max-width: 560px; }
+.article__meta { margin: 0 0 36px; text-align: center; }
+.article__title {
+  font-family: var(--serif); font-weight: 400;
+  font-size: 40px; line-height: 1.16; letter-spacing: -0.005em;
+  margin: 0 auto 22px; text-align: center; max-width: 22ch;
+}
+.article__title em { font-style: italic; font-weight: 400; color: var(--ash); }
+.article__rule { margin: 64px auto; }
+.article p {
+  font-family: var(--serif);
+  font-size: 19px; line-height: 1.75; font-weight: 400;
+  color: var(--sumi); margin: 0 0 26px;
+  letter-spacing: 0.005em; text-wrap: pretty;
+}
+.pull-quote {
+  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-size: 22px; line-height: 1.55; color: var(--sumi);
+  margin: 56px auto; text-align: center; max-width: 26ch;
+}
+
+.article-figure {
+  margin: 128px auto 24px;
+  width: 760px; max-width: calc(100% - 80px);
+}
+.article-photo {
+  width: 100%; height: 420px;
+  position: relative; overflow: hidden;
+  background:
+    linear-gradient(180deg, #d6d0c5 0%, #b4afa6 70%, #908b83 100%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 7px);
+  background-blend-mode: multiply;
+}
+.article-caption {
+  margin: 0 auto 128px;
+  width: 760px; max-width: calc(100% - 80px);
+  font-family: var(--sans); font-size: 10px; font-weight: 400;
+  letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--ash);
+}
+
+.article-nav {
+  margin-top: 120px; padding: 32px 80px 0;
+  border-top: 1px solid var(--stone);
+  display: flex; justify-content: center; gap: 64px;
+}
+.article-nav a,
+.article-nav span {
+  font-family: var(--sans); font-size: 10px; font-weight: 400;
+  letter-spacing: 0.4em; text-transform: uppercase;
+  color: var(--ash); text-decoration: none;
+}
+.article-nav span.is-disabled { color: var(--stone); }
+
+/* ---------- Archive ----------------------------------------- */
+/* Parallel to .article — same centred 560px column, but a list
+   of entries rather than a single post body. Kept separate from
+   .article because .article p sets prose font sizes that don't
+   fit an archive row. */
+
+.archive { padding: 140px 0 0; margin: 0 auto; max-width: 560px; }
+.archive__label { margin: 0 0 64px; text-align: center; }
+.archive__list { list-style: none; margin: 0; padding: 0; }
+.archive__item { margin: 0 0 64px; }
+.archive__item:last-child { margin-bottom: 0; }
+.archive__date {
+  font-family: var(--sans); font-size: 10px; font-weight: 400;
+  letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--ash); margin: 0 0 10px;
+}
+.archive__link { text-decoration: none; color: var(--sumi); }
+.archive__title {
+  font-family: var(--serif); font-weight: 400;
+  font-size: 22px; line-height: 1.3; letter-spacing: -0.005em;
+  margin: 0;
+}
+
+/* ---------- About ------------------------------------------- */
+
+.about { padding: 200px 0 0; margin: 0 auto; max-width: 520px; }
+.about__label { margin: 0 0 36px; text-align: center; }
+.about__title {
+  font-family: var(--serif); font-weight: 300; font-style: italic;
+  font-size: 36px; line-height: 1.22; letter-spacing: -0.005em;
+  margin: 0 0 56px; text-align: center;
+}
+.about__rule { margin: 0 auto 56px; }
+.about p {
+  font-family: var(--serif);
+  font-size: 19px; line-height: 1.75; font-weight: 400;
+  color: var(--sumi); margin: 0 0 26px;
+  letter-spacing: 0.005em; text-wrap: pretty;
+}
+.about__email {
+  font-family: var(--sans); font-size: 11px; font-weight: 400;
+  letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--ash); margin: 64px 0 0; text-align: center;
+}
+
+/* ---------- Legal pages (Impressum, Privacy) ----------------- */
+/* Plain readable column. Smaller body than .article because
+   legal copy is structural, not prose. Headings step down
+   serif → sans eyebrow at h3 to keep section hierarchy clear
+   without breaking the Sumi palette. */
+
+.legal { padding: 140px 0 56px; margin: 0 auto; max-width: 600px; }
+.legal__title {
+  font-family: var(--serif); font-weight: 400;
+  font-size: 32px; line-height: 1.22; letter-spacing: -0.005em;
+  margin: 0 0 56px; text-align: center;
+}
+.legal h2 {
+  font-family: var(--serif); font-weight: 500;
+  font-size: 22px; line-height: 1.3; letter-spacing: -0.005em;
+  margin: 56px 0 18px;
+}
+.legal h3 {
+  font-family: var(--sans); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ash);
+  margin: 32px 0 12px;
+}
+.legal p {
+  font-family: var(--serif);
+  font-size: 17px; line-height: 1.7; font-weight: 400;
+  color: var(--sumi); margin: 0 0 18px;
+  text-wrap: pretty;
+}
+.legal ul {
+  font-family: var(--serif);
+  font-size: 17px; line-height: 1.7; font-weight: 400;
+  color: var(--sumi); margin: 0 0 18px;
+  padding-left: 1.4em;
+}
+.legal li { margin: 0 0 6px; }
+.legal a { color: var(--sumi); text-decoration: underline; text-decoration-color: var(--stone); }
+
+/* ---------- Site footer secondary line ---------------------- */
+/* The footer is now two stacked rows:
+   row 1: enso + project line
+   row 2: legal links
+   Achieved by switching .site-footer to a column with a primary
+   row wrapper for the existing enso + text. */
+
+.site-footer { flex-direction: column; gap: 12px; }
+.site-footer__primary {
+  display: flex; align-items: center; gap: 18px;
+}
+.site-footer__links {
+  font-family: var(--sans); font-size: 9px; font-weight: 400;
+  letter-spacing: 0.4em; text-transform: uppercase; color: var(--ash);
+  display: flex; justify-content: center; gap: 14px;
+}
+.site-footer__links a { color: var(--ash); text-decoration: none; }
+.site-footer__links span { color: var(--stone); }
+
+/* ---------- Responsive -------------------------------------- */
+
+@media (max-width: 720px) {
+  .site-header, .site-footer { padding-left: 28px; padding-right: 28px; }
+  .home-hero { padding-top: 100px; }
+  .home-hero__title { font-size: 38px; }
+  .home-entry { padding-top: 120px; padding-left: 28px; padding-right: 28px; }
+  .home-entry__title { font-size: 26px; }
+  .article { padding: 96px 28px 0; }
+  .article__title { font-size: 30px; }
+  .article-figure, .article-caption {
+    width: auto; max-width: none; margin-left: 28px; margin-right: 28px;
+  }
+  .article-photo { height: 280px; }
+  .article-nav { gap: 28px; padding-left: 28px; padding-right: 28px; }
+  .about { padding: 120px 28px 0; }
+  .about__title { font-size: 28px; }
+  .archive { padding: 96px 28px 0; }
+  .archive__item { margin-bottom: 48px; }
+  .legal { padding: 96px 28px 56px; }
+  .legal__title { font-size: 26px; }
 }

@@ -1,8 +1,15 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { formatSumiDate } from '../utils/formatDate';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const latest = posts[0];
 ---
 
 <!doctype html>
@@ -13,36 +20,45 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="home-hero">
+				<div class="home-hero__inner">
+					<div class="home-hero__mark">
+						<svg viewBox="0 0 100 100" width="92" height="92" aria-hidden="true">
+							<circle
+								cx="50"
+								cy="50"
+								r="38"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2.8"
+								stroke-dasharray="218 26"
+								stroke-dashoffset="-12"
+								stroke-linecap="round"
+								transform="rotate(-130 50 50)"
+							></circle>
+						</svg>
+					</div>
+					<p class="eyebrow eyebrow--center home-hero__date">11 . v . 2026</p>
+					<h1 class="home-hero__title">One pedal stroke,<br />then another.</h1>
+				</div>
+			</section>
+
+			{
+				latest && (
+					<section class="home-entry">
+						<div class="home-entry__inner">
+							<p class="eyebrow home-entry__label">Latest</p>
+							<a class="home-entry__link" href={`/blog/${latest.id}/`}>
+								<h2 class="home-entry__title">{latest.data.title}</h2>
+								<p class="home-entry__excerpt">{latest.data.description}</p>
+							</a>
+							<p class="home-entry__all">
+								<a href="/blog">All entries</a>
+							</p>
+						</div>
+					</section>
+				)
+			}
 		</main>
 		<Footer />
 	</body>

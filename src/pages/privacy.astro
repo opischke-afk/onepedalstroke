@@ -1,0 +1,119 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`Privacy — ${SITE_TITLE}`}
+			description="Privacy policy and GDPR/DSGVO information for onepedalstroke.cc."
+		/>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="legal">
+				<h1 class="legal__title">Privacy Policy / Datenschutzerklärung</h1>
+
+				<p>
+					This site processes minimal personal data. This page explains what, why, and your rights
+					under the EU General Data Protection Regulation (GDPR / DSGVO).
+				</p>
+
+				<h2>Controller</h2>
+				<p>
+					Oliver Pischke<br />
+					Saarlouis, Germany
+				</p>
+				<p>Email: hello@onepedalstroke.cc</p>
+
+				<h2>What data is collected</h2>
+
+				<h3>Server logs</h3>
+				<p>
+					When you visit this site, the hosting provider (Cloudflare Pages) automatically records:
+				</p>
+				<ul>
+					<li>Your IP address (truncated where technically possible)</li>
+					<li>The date and time of access</li>
+					<li>The page requested</li>
+					<li>The HTTP status code returned</li>
+					<li>Your browser type and operating system (user agent string)</li>
+					<li>The referring page, if any</li>
+				</ul>
+				<p>
+					This data is stored temporarily for security and operational purposes. It is not combined
+					with other data and is not used to identify individual visitors. Legal basis: Art. 6(1)(f)
+					GDPR (legitimate interest in operating and securing the site).
+				</p>
+
+				<h3>Fonts</h3>
+				<p>
+					Fonts on this site are served from the same domain (self-hosted). No data is transmitted
+					to Google, Adobe, or other third-party font services.
+				</p>
+
+				<h3>Cookies</h3>
+				<p>
+					This site sets no cookies for tracking, analytics, or advertising. The hosting provider
+					may set technically necessary cookies for security purposes; these are not used to
+					identify you.
+				</p>
+
+				<h3>Analytics</h3>
+				<p>
+					This site does not use Google Analytics, Plausible, or any third-party analytics service.
+				</p>
+
+				<h3>Contact</h3>
+				<p>
+					If you email me, your message and email address are processed only to respond to your
+					inquiry. Emails are stored in my mail provider's systems and on my devices. Legal basis:
+					Art. 6(1)(b) GDPR (taking steps at your request).
+				</p>
+
+				<h2>Your rights</h2>
+				<p>Under the GDPR you have the right to:</p>
+				<ul>
+					<li>Request information about what data is held about you (Art. 15)</li>
+					<li>Request correction of inaccurate data (Art. 16)</li>
+					<li>Request deletion of your data (Art. 17)</li>
+					<li>Restrict processing (Art. 18)</li>
+					<li>Object to processing (Art. 21)</li>
+					<li>
+						Lodge a complaint with a supervisory authority. The competent authority for Saarland is
+						the Unabhängiges Datenschutzzentrum Saarland (<a
+							href="https://datenschutz.saarland.de">https://datenschutz.saarland.de</a
+						>)
+					</li>
+				</ul>
+				<p>To exercise any of these rights, contact me at hello@onepedalstroke.cc.</p>
+
+				<h2>Hosting</h2>
+				<p>
+					This site is hosted by Cloudflare Pages, a service of Cloudflare, Inc., 101 Townsend St,
+					San Francisco, CA 94107, USA. Cloudflare may process server log data as described above.
+					See Cloudflare's privacy policy at <a href="https://www.cloudflare.com/privacypolicy/"
+						>https://www.cloudflare.com/privacypolicy/</a
+					>.
+				</p>
+				<p>
+					Data transfer to the US is covered by Cloudflare's adherence to the EU-US Data Privacy
+					Framework.
+				</p>
+
+				<h2>Changes</h2>
+				<p>
+					This policy may be updated as the site changes. The current version is in effect from the
+					date below.
+				</p>
+				<p>Last updated: 11 May 2026</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
