@@ -19,6 +19,6 @@ If you ride, if you're curious, if you want to see whether a returning hobby rid
 One pedal stroke. Then another.
 
 <figure class="article-figure">
-  <img src="/images/day-one-bike.jpg" alt="Rose Reveal AL 105 Di2, leaning on a bench in Saarlouis" />
+  <img src="/images/day-one-bike.jpg" alt="Road bike, leaning on a bench in Saarlouis" />
 </figure>
 <p class="article-caption">Day one. Saarlouis.</p>
