@@ -14,7 +14,7 @@ The bike is a Rose Reveal AL 105 Di2. The goal is the start line of the Transcon
 
 This site exists to keep me honest. Public commitment, public record, public reckoning.
 
-If you ride, if you're curious, if you want to see whether a returning amateur can build to TCR in four years from a flat corner of Germany, follow along.
+If you ride, if you're curious, if you want to see whether a returning hobby rider can build to TCR in four years from a flat corner of Germany, follow along.
 
 One pedal stroke. Then another.
 
