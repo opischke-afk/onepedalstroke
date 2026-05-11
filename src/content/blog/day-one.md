@@ -10,7 +10,7 @@ Four years to find out if that was wise.
 
 This is day one.
 
-The bike is a Rose Reveal AL 105 Di2. The goal is the start line of the Transcontinental Race 2030. The four years between are the actual project: the training, the kit, the rides that go well, the rides that don't, the slow accumulation of fitness at an age when most people are slowing down.
+The goal is the start line of the Transcontinental Race 2030. The four years between are the actual project: the training, the kit, the rides that go well, the rides that don't, the slow accumulation of fitness at an age when most people are slowing down.
 
 This site exists to keep me honest. Public commitment, public record, public reckoning.
 
