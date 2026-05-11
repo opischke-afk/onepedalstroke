@@ -21,3 +21,8 @@ Year 3 is the first proper ultra: the North Sea coast in self-supported form. Ab
 Year 4 is the whole way. TCR 2030. Or the attempt.
 
 I'll write here about what works and what doesn't. The honest version, not the highlight reel. That's the project. One pedal stroke, then another, for a thousand days.
+
+<figure class="article-figure article-figure--square">
+  <img src="/images/the-plan-phasing.png" alt="Four-year training plan for TCR 2030: Foundation, Ride further, Ride east, The whole way" />
+</figure>
+<p class="article-caption">Four years.</p>
